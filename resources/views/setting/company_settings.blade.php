@@ -124,7 +124,7 @@ if ($SITE_RTL == '') {
                                                     <div class=" setting-card">
                                                         <div class="logo-content mt-4 setting-logo">
                                                             <img src="{{ $logo . '/' . (isset($company_logo) && !empty($company_logo) ? $company_logo : 'logo-dark.png') }}"
-                                                                class="logo logo-sm"
+                                                                class="logo logo-sm"  width="60"
                                                                 style="filter: drop-shadow(2px 3px 7px #011c4b);">
                                                         </div>
                                                         <div class="choose-files mt-3">
@@ -138,7 +138,7 @@ if ($SITE_RTL == '') {
                                                                         class="ti ti-upload px-1"></i>{{ __('Choose file here') }}
                                                                 </div>
                                                                 <input type="file" class="form-control file"
-                                                                    name="company_logo" id="company_logo"
+                                                                    name="company_logo" id="company_logo" width="70"
                                                                     data-filename="company_logo">
                                                             </label>
 
@@ -164,7 +164,7 @@ if ($SITE_RTL == '') {
                                                     <div class=" setting-card">
                                                         <div class="logo-content mt-4  setting-logo">
                                                             <img src="{{ $logo . '/' . (isset($company_logo_light) && !empty($company_logo_light) ? $company_logo_light : 'logo-light.png') }}"
-                                                                class="logo logo-sm img_setting"
+                                                                class="logo logo-sm img_setting"  width="70"
                                                                 style="filter: drop-shadow(2px 3px 7px #011c4b);">
                                                         </div>
                                                         <div class="choose-files mt-3">

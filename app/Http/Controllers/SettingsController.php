@@ -47,7 +47,7 @@ class SettingsController extends Controller
             if ($request->logo) {
                 $request->validate(
                     [
-                        'logo' => 'image|mimes:png',
+                        'logo' => 'image|mimes:png,jpeg',
                     ]
                 );
 
@@ -56,7 +56,7 @@ class SettingsController extends Controller
             }
 
             if ($request->logo_light) {
-                $request->validate(['logo_light' => 'required|image|mimes:png|max:1024',]);
+                $request->validate(['logo_light' => 'required|image|mimes:png,jpeg|max:1024',]);
 
                 $smallName = 'logo-light.png';
                 $path      = $request->file('logo_light')->storeAs('uploads/logo/', $smallName);
@@ -65,7 +65,7 @@ class SettingsController extends Controller
             if ($request->favicon) {
                 $request->validate(
                     [
-                        'favicon' => 'image|mimes:png'
+                        'favicon' => 'image|mimes:png,jpeg'
                     ]
                 );
                 $favicon = 'favicon.png';
@@ -95,8 +95,8 @@ class SettingsController extends Controller
                 {
                     $post['SITE_RTL']='off';
                 }
-               
-            
+
+
 
                 $settings = Utility::settings();
                 unset($post['_token']);
@@ -119,14 +119,14 @@ class SettingsController extends Controller
 
                 }
             }
-           
+
             return redirect()->back()->with('success', 'Logo successfully updated.');
         } else {
             return redirect()->back()->with('error', __('Permission denied.'));
         }
     }
 
-    
+
     public function saveEmailSettings(Request $request)
     {
         if (\Auth::user()->type == 'company' || \Auth::user()->type == 'super admin') {
@@ -418,7 +418,7 @@ class SettingsController extends Controller
     {
         // dd($request->all());
 
-        if (\Auth::user()->type == 'company' || \Auth::user()->type == 'super admin') 
+        if (\Auth::user()->type == 'company' || \Auth::user()->type == 'super admin')
 
         {
 
@@ -428,7 +428,7 @@ class SettingsController extends Controller
 
                 $request->validate(
                     [
-                        'company_logo' => 'image|mimes:png|max:20480',
+                        'company_logo' => 'image|mimes:png,jpeg|max:20480',
                     ]
                 );
 
@@ -451,7 +451,7 @@ class SettingsController extends Controller
             if ($request->company_logo_light) {
                 $request->validate(
                     [
-                        'company_logo_light' => 'image|mimes:png|max:20480',
+                        'company_logo_light' => 'image|mimes:png,jpeg|max:20480',
                     ]
                 );
                 $smallLogoName = $user->id . '_light_logo.png';
@@ -473,7 +473,7 @@ class SettingsController extends Controller
             if ($request->company_favicon) {
                 $request->validate(
                     [
-                        'company_favicon' => 'image|mimes:png|max:20480',
+                        'company_favicon' => 'image|mimes:png,jpeg|max:20480',
                     ]
                 );
                 $favicon = $user->id . '_favicon.png';
@@ -490,7 +490,7 @@ class SettingsController extends Controller
                     ]
                 );
             }
-              
+
             if (!empty($request->title_text) || !empty($request->metakeyword) || !empty($request->metadesc) || !empty($request->theme_color) ||!empty($request->cust_theme_bg) ||!empty($request->cust_darklayout) || !empty($request->SITE_RTL)) {
                 $post = $request->all();
 
@@ -506,12 +506,12 @@ class SettingsController extends Controller
                 {
                     $post['cust_theme_bg']='off';
                 }
-            
+
                 if(!isset($request->SITE_RTL))
                 {
                     $post['SITE_RTL']='off';
                 }
-                
+
 
                 $settings = Utility::settings();
                 unset($post['_token'], $post['company_logo'], $post['company_small_logo'], $post['company_logo_light'], $post['company_favicon']);
@@ -847,7 +847,7 @@ class SettingsController extends Controller
 
     public function adminPaymentSettings($request)
     {
-      
+
         if (isset($request->is_stripe_enabled) && $request->is_stripe_enabled == 'on') {
 
             $request->validate(

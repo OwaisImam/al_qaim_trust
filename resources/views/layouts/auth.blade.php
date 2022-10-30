@@ -79,7 +79,7 @@ $color = !empty($setting['theme_color']) ? $setting['theme_color'] : 'theme-3';
                 <div class="container-fluid pe-2">
                     <a class="navbar-brand" href="#">
                         <img src="{{ $logo . '/' . (isset($company_logo) && !empty($company_logo) ? $company_logo : 'logo-dark.png') }}"
-                            alt="{{ config('app.name', 'HRMGO') }}" alt="logo">
+                            alt="{{ config('app.name', 'HRMGO') }}" width="70" alt="logo">
                         {{-- <img src="{{ asset(Storage::url('uploads/logo/' . $logo)) }}" alt="{{ env('APP_NAME') }}"
                             class="logo logo-lg" /> --}}
                         {{-- <img src="{{ asset(Storage::url('uploads/logo/' . $logo)) }}" alt="{{ env('APP_NAME') }}"

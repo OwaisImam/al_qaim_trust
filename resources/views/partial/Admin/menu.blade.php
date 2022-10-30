@@ -28,7 +28,7 @@ $currantLang = $users->currentLanguage();
                     class="logo logo-sm" /> --}}
 
                     <img src="{{ $logo . '/' . (isset($company_logo) && !empty($company_logo) ? $company_logo : 'logo-dark.png') }}"
-                    alt="{{ config('app.name', 'HRMGo') }}" class="logo logo-lg">
+                    alt="{{ config('app.name', 'HRMGo') }}" width="70" class="logo logo-lg">
 
               </a>
         </div>
@@ -697,10 +697,10 @@ $currantLang = $users->currentLanguage();
                     Gate::check('Manage Job Category') ||
                     Gate::check('Manage Job Stage'))
                     <li class="dash-item dash-hasmenu">
-                        <a href="{{route('branch.index')}}" class="dash-link"><span class="dash-micon"><i
-                                    class="ti ti-table"></i></span><span
-                                class="dash-mtext">{{ __('System Setup') }}</span></a>
-                        </li>
+{{--                        <a href="{{route('branch.index')}}" class="dash-link"><span class="dash-micon"><i--}}
+{{--                                    class="ti ti-table"></i></span><span--}}
+{{--                                class="dash-mtext">{{ __('System Setup') }}</span></a>--}}
+{{--                        </li>--}}
                         <!-- <ul class="dash-submenu">
                             @can('Manage Branch')
                                 <li class="dash-item {{ request()->is('branch*') ? 'active' : '' }}">

@@ -33,7 +33,7 @@
 }
 
 
-.choose-files div { 
+.choose-files div {
     color: #fff;
     /* background: #584ED2 !important; */
     border: none;
@@ -81,7 +81,7 @@
 
 .dash-sidebar .main-logo a img {
     object-fit: contain;
-    width: auto !important;
+    /*width: auto !important;*/
     height: auto;
     margin: 0 auto;
     display: flex;
@@ -258,7 +258,7 @@
 .active_color {
     border: 2px solid #000 !important;
 }
-  
+
 /* chat counter */
 .message-counter {
     position: absolute;
@@ -269,7 +269,7 @@
 width: 15px !important;
     text-align: center !important;
     color: #fff !important;
-}  
+}
 .dash-card{
     height: 200px !important;
 }

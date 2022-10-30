@@ -122,7 +122,7 @@ if ($SITE_RTL == '') {
                                                     <div class=" setting-card">
                                                         <div class="logo-content mt-4 setting-logo">
                                                             <img src="{{ asset(Storage::url('uploads/logo/logo-dark.png')) }}"
-                                                                class="logo logo-sm"
+                                                                class="logo logo-sm" width="70"
                                                                 style="filter: drop-shadow(2px 3px 7px #011c4b);">
                                                         </div>
                                                         <div class="choose-files mt-5">
@@ -157,7 +157,7 @@ if ($SITE_RTL == '') {
                                                     <div class=" setting-card">
                                                         <div class="logo-content mt-4  setting-logo">
                                                             <img src="{{ asset(Storage::url('uploads/logo/logo-light.png')) }}"
-                                                                class="logo logo-sm img_setting"
+                                                                class="logo logo-sm img_setting" width="70"
                                                                 style="filter: drop-shadow(2px 3px 7px #011c4b);">
                                                         </div>
 
